@@ -7,12 +7,12 @@ import RDP
 
 
 
-class MyWindow(QtWidgets.QWidget):
+class LIDAR(QtWidgets.QWidget):
     default_speed = 3.0
     def __init__(self):
-        super(MyWindow, self).__init__()
+        super(LIDAR, self).__init__()
         self.setGeometry(300, 300,300,100)
-        self.setWindowTitle('pyqt_tst')
+        self.setWindowTitle('rangefinder')
         self.left_speed = 0
         self.right_speed = 0
         sim.simxFinish(-1)  # если имелась кака-либо незавершенная сессия, она будет завершена
@@ -109,7 +109,7 @@ class MyWindow(QtWidgets.QWidget):
 
 def window():
     app = QtWidgets.QApplication(sys.argv)
-    win = MyWindow()
+    win = LIDAR()
     win.show()
     sys.exit(app.exec_())
 
